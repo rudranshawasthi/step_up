@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -41,8 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   CircleAvatar(
-                    child:
-                        Icon(Icons.person, size: 35, color: Color(0xffedebf7)),
+                    backgroundImage: AssetImage(
+                      'assets/images/userDP.jpg',
+                    ),
                     backgroundColor: Color(0xFFee8e92),
                     radius: 30,
                   ),
@@ -73,32 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Icons.directions_run,
                               )
                             ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                          color: Color(0xFFd1d2e7),
-                          borderRadius: BorderRadius.circular(30)),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Text(
-                                'Walk',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w500),
-                              ),
-                              Icon(Icons.run_circle)
-                            ],
-                          )
+                          ),
                         ],
                       ),
                     ),
